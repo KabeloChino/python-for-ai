@@ -1,14 +1,10 @@
-import requests
+class ChessGame():
+    def __init__(self, player):
+        self.player = player
 
-# We need coordinates to get weather data
-latitude = 48.85   # Paris latitude
-longitude = 2.35   # Paris longitude
+    def make_move(self):
+        return f"{self.player} make a move!"
 
-# Build the API URL with our parameters
-url = f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current=temperature_2m"
+chino = ChessGame("Chino") 
 
-# Make the request
-response = requests.get(url)
-data = response.json()
-
-data["current"]
+chino.make_move()
